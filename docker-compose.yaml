@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  dg2api:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env
+    volumes:
+      - ./dg2api.py:/app/dg2api.py
